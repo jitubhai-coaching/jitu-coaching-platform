@@ -317,3 +317,19 @@ transition:0.3s;
 .gallery-container img:hover{
 transform:scale(1.05);
 }
+
+.view-more{
+display:inline-block;
+margin-top:25px;
+padding:10px 20px;
+background:skyblue;
+color:black;
+text-decoration:none;
+font-weight:bold;
+border-radius:6px;
+transition:0.3s;
+}
+
+.view-more:hover{
+background:#5ec6e8;
+}
