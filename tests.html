@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<title>Weekly Test</title>
+</head>
+
+<body>
+
+<h2>Math Test</h2>
+
+<p>2 + 2 = ?</p>
+
+<input type="radio" name="q1">3<br>
+
+<input type="radio" name="q1" id="correct">4<br>
+
+<input type="radio" name="q1">5<br>
+
+<button onclick="check()">Submit</button>
+
+<p id="result"></p>
+
+<script>
+
+function check(){
+
+if(document.getElementById("correct").checked)
+
+document.getElementById("result").innerHTML="Correct!"
+
+else
+
+document.getElementById("result").innerHTML="Wrong"
+
+}
+
+</script>
+
+</body>
+</html>
