@@ -193,3 +193,73 @@ flex-direction:column;
 }
 
 }
+
+/* COURSE PAGE HEADER */
+
+.course-header{
+text-align:center;
+padding:40px;
+background:linear-gradient(135deg,#0044cc,#007bff);
+color:white;
+}
+
+/* COURSE CONTAINER */
+
+.course-container{
+display:flex;
+justify-content:center;
+gap:30px;
+padding:50px;
+flex-wrap:wrap;
+}
+
+/* COURSE CARDS */
+
+.course-card{
+background:white;
+width:260px;
+padding:25px;
+border-radius:12px;
+text-align:center;
+box-shadow:0 6px 20px rgba(0,0,0,0.15);
+transition:0.3s;
+}
+
+.course-card:hover{
+transform:translateY(-8px);
+}
+
+/* COURSE TITLE */
+
+.course-card h2{
+color:#002f6c;
+margin-bottom:15px;
+}
+
+/* COURSE LIST */
+
+.course-card ul{
+list-style:none;
+padding:0;
+}
+
+.course-card li{
+padding:6px 0;
+}
+
+/* BUTTON */
+
+.course-btn{
+display:inline-block;
+margin-top:15px;
+padding:10px 20px;
+background:#ff4b2b;
+color:white;
+text-decoration:none;
+border-radius:6px;
+font-weight:bold;
+}
+
+.course-btn:hover{
+background:#e6391f;
+}
