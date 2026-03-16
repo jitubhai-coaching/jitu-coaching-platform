@@ -39,8 +39,8 @@ padding:80px 20px;   /* reduced padding to move content up */
 /* Title */
 .hero h2{
 color:black;
-font-size:40px;
-margin-top:-40px;   /* moves title upward */
+font-size:30px;
+margin-top:-30px;   /* moves title upward */
 }
 
 /* Subtitle */
