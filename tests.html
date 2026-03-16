@@ -3,25 +3,144 @@
 
 <head>
 
-<title>Online Test</title>
+<title>Weekly Test Series</title>
 
-<script src="js/exam.js"></script>
+<style>
+
+body{
+font-family:Arial, sans-serif;
+background:#f4f6fb;
+margin:0;
+text-align:center;
+}
+
+/* HEADER */
+
+header{
+background:#002f6c;
+color:white;
+padding:20px;
+}
+
+/* TEST MENU */
+
+.test-menu{
+margin:30px;
+}
+
+.test-menu button{
+padding:12px 20px;
+margin:10px;
+border:none;
+background:#0056d2;
+color:white;
+border-radius:6px;
+cursor:pointer;
+font-size:16px;
+}
+
+.test-menu button:hover{
+background:#003f9e;
+}
+
+/* TEST CARD */
+
+.test-card{
+background:white;
+width:350px;
+margin:30px auto;
+padding:25px;
+border-radius:10px;
+box-shadow:0 4px 12px rgba(0,0,0,0.15);
+text-align:left;
+}
+
+.test-card h3{
+margin-top:0;
+}
+
+/* SUBMIT BUTTON */
+
+.submit-btn{
+background:#28a745;
+color:white;
+border:none;
+padding:10px 18px;
+border-radius:5px;
+cursor:pointer;
+margin-top:15px;
+}
+
+.submit-btn:hover{
+background:#1f8a37;
+}
+
+/* RESULT */
+
+#result{
+margin-top:20px;
+font-size:18px;
+font-weight:bold;
+color:#333;
+}
+
+</style>
+
+<script>
+
+function submitTest(){
+
+var answers=document.getElementsByName("q1")
+
+var score=0
+
+for(var i=0;i<answers.length;i++){
+
+if(answers[i].checked && answers[i].value=="10")
+
+score++
+
+}
+
+document.getElementById("result").innerHTML="Your Score: "+score+" / 1"
+
+}
+
+</script>
 
 </head>
 
 <body>
 
-<h2>Math Test</h2>
+<header>
+<h1>Weekly Test Series</h1>
+<p>Practice Tests for Class 8, 9 & 10</p>
+</header>
 
-<p>5 + 5 = ?</p>
+<div class="test-menu">
 
-<input type="radio" name="q1" value="8">8<br>
-<input type="radio" name="q1" value="10">10<br>
-<input type="radio" name="q1" value="12">12<br>
+<button>Math Quiz</button>
+<button>Science Quiz</button>
+<button>English Grammar Test</button>
 
-<button onclick="submitTest()">Submit</button>
+</div>
+
+<div class="test-card">
+
+<h3>Math Quiz</h3>
+
+<p><b>Question:</b> 5 + 5 = ?</p>
+
+<label><input type="radio" name="q1" value="8"> 8</label><br>
+<label><input type="radio" name="q1" value="10"> 10</label><br>
+<label><input type="radio" name="q1" value="12"> 12</label><br>
+
+<button class="submit-btn" onclick="submitTest()">Submit Test</button>
 
 <p id="result"></p>
 
+</div>
+
 </body>
+
 </html>
