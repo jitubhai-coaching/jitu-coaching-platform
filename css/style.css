@@ -8,6 +8,23 @@ color:#333;
 }
 
 /* HEADER */
+.logo-container{
+display:flex;
+align-items:center;
+gap:10px;
+}
+
+.logo{
+width:50px;
+height:50px;
+object-fit:contain;
+}
+
+.logo-container span{
+font-size:22px;
+font-weight:bold;
+color:white;
+}
 
 header{
 background:linear-gradient(135deg,#002f6c,#0056b3);
