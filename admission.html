@@ -2,25 +2,33 @@
 <html>
 
 <head>
-<title>Admission</title>
+<title>Admission Form</title>
+<link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
 
-<h2>Admission Form</h2>
+<h1 style="text-align:center;">Admission Form</h1>
 
-<form>
+<form class="form">
 
-Name<br>
-<input type="text"><br>
+<label>Student Name</label>
+<input type="text" required>
 
-Class<br>
-<input type="text"><br>
+<label>Class</label>
+<select>
+<option>Class 8</option>
+<option>Class 9</option>
+<option>Class 10</option>
+</select>
 
-Phone<br>
-<input type="text"><br>
+<label>Phone Number</label>
+<input type="text" required>
 
-<button>Submit</button>
+<label>Parent Name</label>
+<input type="text">
+
+<button type="submit">Submit</button>
 
 </form>
 
