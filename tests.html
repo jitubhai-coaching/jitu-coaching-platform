@@ -2,40 +2,26 @@
 <html>
 
 <head>
-<title>Weekly Test</title>
+
+<title>Online Test</title>
+
+<script src="js/exam.js"></script>
+
 </head>
 
 <body>
 
 <h2>Math Test</h2>
 
-<p>2 + 2 = ?</p>
+<p>5 + 5 = ?</p>
 
-<input type="radio" name="q1">3<br>
+<input type="radio" name="q1" value="8">8<br>
+<input type="radio" name="q1" value="10">10<br>
+<input type="radio" name="q1" value="12">12<br>
 
-<input type="radio" name="q1" id="correct">4<br>
-
-<input type="radio" name="q1">5<br>
-
-<button onclick="check()">Submit</button>
+<button onclick="submitTest()">Submit</button>
 
 <p id="result"></p>
-
-<script>
-
-function check(){
-
-if(document.getElementById("correct").checked)
-
-document.getElementById("result").innerHTML="Correct!"
-
-else
-
-document.getElementById("result").innerHTML="Wrong"
-
-}
-
-</script>
 
 </body>
 </html>
