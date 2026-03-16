@@ -263,3 +263,27 @@ font-weight:bold;
 .course-btn:hover{
 background:#e6391f;
 }
+
+.testimonials{
+background:#f0f4ff;
+padding:60px 20px;
+text-align:center;
+}
+
+.testimonial{
+background:white;
+max-width:500px;
+margin:20px auto;
+padding:20px;
+border-radius:10px;
+box-shadow:0 4px 10px rgba(0,0,0,0.1);
+}
+
+.testimonial p{
+font-style:italic;
+}
+
+.testimonial h4{
+margin-top:10px;
+color:#002f6c;
+}
