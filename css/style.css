@@ -35,25 +35,6 @@ color:white;
 text-align:center;
 padding:120px 20px;
 }
-.hero{
-text-align:center;
-padding:80px 20px;
-background:#ffc107;
-}
-
-.hero-title{
-color:black;
-margin-top:-2cm;
-}
-
-.hero-subtitle{
-color:white;
-font-size:18px;
-}
-
-.hero h2, .hero p, .hero .btn{
-position:relative;
-}
 
 .btn{
 
@@ -81,4 +62,14 @@ border-radius:8px;
 
 box-shadow:0 2px 10px rgba(0,0,0,0.1);
 
+}
+
+.hero h2{
+color:black;        /* Classes 8th, 9th & 10th in black */
+margin-top:-2cm;    /* move text 2 cm upward */
+}
+
+.hero p{
+color:white;        /* subtitle in white */
+font-size:18px;
 }
