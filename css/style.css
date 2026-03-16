@@ -22,7 +22,7 @@ width:auto;
 header{
 background:linear-gradient(135deg,#002f6c,#0056b3);
 color:white;
-padding:15px 40px;
+padding:10px 40px;
 display:flex;
 justify-content:space-between;
 align-items:center;
