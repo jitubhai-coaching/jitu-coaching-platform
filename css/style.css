@@ -1,89 +1,46 @@
 body{
-font-family:Poppins;
+font-family: Arial;
 margin:0;
-background:#f5f6fa;
+background:#f4f4f4;
 }
 
 header{
-display:flex;
-justify-content:space-between;
-padding:20px 8%;
-background:#0b3d91;
+background:#002f6c;
 color:white;
+padding:20px;
+text-align:center;
 }
 
 nav a{
-margin-left:25px;
 color:white;
+margin:10px;
 text-decoration:none;
+font-weight:bold;
 }
 
 .hero{
-height:500px;
-background:url('../images/classroom.jpg');
-background-size:cover;
-color:white;
-display:flex;
-flex-direction:column;
-justify-content:center;
-align-items:center;
+background:#ffcc00;
+padding:60px;
 text-align:center;
 }
 
 .btn{
-background:#ff9800;
-padding:12px 30px;
-border-radius:6px;
-color:white;
-text-decoration:none;
-}
-
-.features{
-padding:70px 10%;
-text-align:center;
-}
-
-.grid{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-gap:20px;
-}
-
-.card{
-background:white;
-padding:25px;
-border-radius:10px;
-box-shadow:0 5px 15px rgba(0,0,0,0.1);
-}
-
-.subjects{
-padding:60px 10%;
-text-align:center;
-}
-
-.subject-grid{
-display:flex;
-justify-content:center;
-gap:20px;
-flex-wrap:wrap;
-}
-
-.subject-grid div{
-background:#0b3d91;
+background:red;
 color:white;
 padding:10px 20px;
-border-radius:20px;
+text-decoration:none;
+border-radius:5px;
 }
 
-.cta{
-background:#ff9800;
-color:white;
-text-align:center;
-padding:50px;
+section{
+padding:40px;
+background:white;
+margin:20px;
+border-radius:8px;
 }
 
 footer{
-background:#111;
+background:#222;
 color:white;
 text-align:center;
 padding:15px;
