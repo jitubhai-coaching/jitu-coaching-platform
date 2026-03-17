@@ -6,11 +6,46 @@
 <link rel="stylesheet" href="css/style.css">
 
 <script>
-let isAdmin = localStorage.getItem("admin")
 
-if(isAdmin !== "true"){
+let users = JSON.parse(localStorage.getItem("users")) || []
+let container = document.getElementById("studentList")
+
+if(users.length === 0){
+container.innerHTML = "<p>No students registered yet.</p>"
+}
+
+users.forEach((u, index) => {
+
+let div = document.createElement("div")
+div.className = "card"
+
+div.innerHTML = `
+<h3>${u.name}</h3>
+<p><b>Email:</b> ${u.email}</p>
+<p><b>Status:</b> ${u.admitted ? "✅ Admitted" : "❌ Not Admitted"}</p>
+
+${!u.admitted ? 
+`<button onclick="approve(${index})">Approve</button>` 
+: 
+`<button disabled>Approved</button>`
+}
+`
+
+container.appendChild(div)
+
+})
+
+function approve(index){
+users[index].admitted = true
+localStorage.setItem("users", JSON.stringify(users))
+location.reload()
+}
+
+function logout(){
+localStorage.removeItem("admin")
 window.location = "admin-login.html"
 }
+
 </script>
 
 </head>
