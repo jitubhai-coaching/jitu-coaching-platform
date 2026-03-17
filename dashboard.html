@@ -4,8 +4,18 @@
 <head>
 
 <title>Dashboard</title>
-
 <link rel="stylesheet" href="css/style.css">
+
+<script>
+let email = localStorage.getItem("currentUser")
+let users = JSON.parse(localStorage.getItem("users")) || []
+
+let user = users.find(u => u.email === email)
+
+if(!user || !user.admitted){
+window.location = "login.html"
+}
+</script>
 
 </head>
 
@@ -14,21 +24,15 @@
 <h1>Student Dashboard</h1>
 
 <div class="card">
-
 <a href="courses.html">Courses</a>
-
 </div>
 
 <div class="card">
-
 <a href="materials.html">Study Notes</a>
-
 </div>
 
 <div class="card">
-
 <a href="tests.html">Weekly Tests</a>
-
 </div>
 
 </body>
