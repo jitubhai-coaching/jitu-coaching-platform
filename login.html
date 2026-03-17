@@ -2,19 +2,121 @@
 <html>
 
 <head>
-<title>Login</title>
+<title>Login | Jitu Bhai Coaching</title>
 <link rel="stylesheet" href="css/style.css">
+
+<style>
+
+/* FULL PAGE DESIGN */
+
+body{
+display:flex;
+justify-content:center;
+align-items:center;
+height:100vh;
+margin:0;
+font-family:Arial;
+background:linear-gradient(135deg,#002f6c,#0056b3);
+}
+
+/* LOGIN BOX */
+
+.login-box{
+background:white;
+padding:40px;
+border-radius:12px;
+width:320px;
+text-align:center;
+box-shadow:0 10px 30px rgba(0,0,0,0.3);
+animation:fadeIn 0.8s ease;
+}
+
+/* TITLE */
+
+.login-box h2{
+margin-bottom:20px;
+color:#002f6c;
+}
+
+/* INPUT FIELDS */
+
+.login-box input{
+width:100%;
+padding:12px;
+margin:10px 0;
+border-radius:6px;
+border:1px solid #ccc;
+font-size:14px;
+outline:none;
+}
+
+.login-box input:focus{
+border-color:#0056b3;
+}
+
+/* BUTTON */
+
+.login-box button{
+width:100%;
+padding:12px;
+background:linear-gradient(45deg,#28a745,#20c997);
+color:white;
+border:none;
+border-radius:6px;
+font-size:16px;
+cursor:pointer;
+transition:0.3s;
+}
+
+.login-box button:hover{
+transform:scale(1.05);
+}
+
+/* LINKS */
+
+.login-box p{
+margin-top:15px;
+font-size:14px;
+}
+
+.login-box a{
+color:#0056b3;
+text-decoration:none;
+font-weight:bold;
+}
+
+/* ANIMATION */
+
+@keyframes fadeIn{
+from{
+opacity:0;
+transform:translateY(20px);
+}
+to{
+opacity:1;
+transform:translateY(0);
+}
+}
+
+</style>
+
 </head>
 
 <body>
 
+<div class="login-box">
+
 <h2>Student Login</h2>
 
-<input id="email" placeholder="Email">
+<input id="email" placeholder="Email Address">
 
 <input id="password" type="password" placeholder="Password">
 
 <button onclick="login()">Login</button>
+
+<p>New student? <a href="register.html">Create Account</a></p>
+
+</div>
 
 <script src="js/script.js"></script>
 
