@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<title>Admin Login</title>
+</head>
+
+<body>
+
+<h2>Admin Login</h2>
+
+<input id="adminUser" placeholder="Username">
+<input id="adminPass" type="password" placeholder="Password">
+
+<button onclick="loginAdmin()">Login</button>
+
+<script>
+
+function loginAdmin(){
+
+let u = document.getElementById("adminUser").value
+let p = document.getElementById("adminPass").value
+
+if(u === "sambitkumarbehera" && p === "Gajanan@2000"){
+localStorage.setItem("admin", "true")
+window.location = "admin.html"
+}else{
+alert("Wrong admin credentials")
+}
+
+}
+
+</script>
+
+</body>
+</html>
