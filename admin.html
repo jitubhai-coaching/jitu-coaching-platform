@@ -4,11 +4,22 @@
 <head>
 <title>Admin Panel</title>
 <link rel="stylesheet" href="css/style.css">
+
+<script>
+let isAdmin = localStorage.getItem("admin")
+
+if(isAdmin !== "true"){
+window.location = "admin-login.html"
+}
+</script>
+
 </head>
 
 <body>
 
 <h1>Admin Panel</h1>
+
+<button onclick="logout()">Logout</button>
 
 <div id="studentList"></div>
 
@@ -26,7 +37,6 @@ div.innerHTML = `
 <h3>${u.name}</h3>
 <p>${u.email}</p>
 <p>Status: ${u.admitted ? "Admitted" : "Not Admitted"}</p>
-
 <button onclick="approve(${index})">Approve</button>
 `
 
@@ -38,6 +48,11 @@ function approve(index){
 users[index].admitted = true
 localStorage.setItem("users", JSON.stringify(users))
 location.reload()
+}
+
+function logout(){
+localStorage.removeItem("admin")
+window.location = "admin-login.html"
 }
 
 </script>
