@@ -414,3 +414,17 @@ transition:0.3s;
 .whatsapp-float:hover{
 transform:scale(1.1);
 }
+
+button{
+padding:8px 15px;
+background:#28a745;
+color:white;
+border:none;
+border-radius:5px;
+cursor:pointer;
+}
+
+button:disabled{
+background:gray;
+cursor:not-allowed;
+}
