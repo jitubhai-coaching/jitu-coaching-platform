@@ -1,40 +1,53 @@
 function register(){
 
-var name=document.getElementById("name").value
-var email=document.getElementById("email").value
-var password=document.getElementById("password").value
+let name = document.getElementById("name").value
+let email = document.getElementById("email").value
+let password = document.getElementById("password").value
 
-var user={
-name:name,
-email:email,
-password:password
+let users = JSON.parse(localStorage.getItem("users")) || []
+
+let newUser = {
+name: name,
+email: email,
+password: password,
+admitted: false   // default
 }
 
-localStorage.setItem(email,JSON.stringify(user))
+users.push(newUser)
 
-alert("Registration successful")
+localStorage.setItem("users", JSON.stringify(users))
 
+alert("Registered Successfully! Please take admission.")
+
+window.location = "admission.html"
 }
 
 function login(){
 
-var email=document.getElementById("email").value
-var password=document.getElementById("password").value
+let email = document.getElementById("email").value
+let password = document.getElementById("password").value
 
-var user=JSON.parse(localStorage.getItem(email))
+let users = JSON.parse(localStorage.getItem("users")) || []
 
-if(user && user.password===password){
+let user = users.find(u => u.email === email && u.password === password)
 
-localStorage.setItem("currentUser",email)
+if(user){
 
-window.location="dashboard.html"
+if(user.admitted){
+
+localStorage.setItem("currentUser", email)
+window.location = "dashboard.html"
+
+}else{
+
+alert("You are not admitted yet. Please take admission.")
+window.location = "admission.html"
 
 }
 
-else{
+}else{
 
 alert("Invalid Login")
 
 }
-
 }
