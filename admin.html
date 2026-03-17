@@ -2,24 +2,45 @@
 <html>
 
 <head>
-
 <title>Admin Panel</title>
-
-<script src="js/admin.js"></script>
-
+<link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
 
-<h1>Admin Dashboard</h1>
+<h1>Admin Panel</h1>
 
-<h3>Upload Study Material</h3>
+<div id="studentList"></div>
 
-<input id="note" placeholder="Paste PDF Link">
+<script>
 
-<button onclick="upload()">Upload</button>
+let users = JSON.parse(localStorage.getItem("users")) || []
+let container = document.getElementById("studentList")
 
-<ul id="list"></ul>
+users.forEach((u, index) => {
+
+let div = document.createElement("div")
+div.className = "card"
+
+div.innerHTML = `
+<h3>${u.name}</h3>
+<p>${u.email}</p>
+<p>Status: ${u.admitted ? "Admitted" : "Not Admitted"}</p>
+
+<button onclick="approve(${index})">Approve</button>
+`
+
+container.appendChild(div)
+
+})
+
+function approve(index){
+users[index].admitted = true
+localStorage.setItem("users", JSON.stringify(users))
+location.reload()
+}
+
+</script>
 
 </body>
 </html>
