@@ -8,6 +8,9 @@ let isAdmin = localStorage.getItem("admin")
 if(isAdmin !== "true"){
 window.location = "admin-login.html"
 }
+window.onbeforeunload = function(){
+localStorage.removeItem("admin")
+}
 </script>
 <title>Admin Panel</title>
 <link rel="stylesheet" href="css/style.css">
