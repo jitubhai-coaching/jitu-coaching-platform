@@ -4,9 +4,19 @@
 <head>
 <title>Admin Panel</title>
 <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+<h1>Admin Panel</h1>
+
+<button onclick="logout()">Logout</button>
+
+<div id="studentList"></div>
 
 <script>
 
+// get users AFTER page loads
 let users = JSON.parse(localStorage.getItem("users")) || []
 let container = document.getElementById("studentList")
 
@@ -29,50 +39,6 @@ ${!u.admitted ?
 : 
 `<button disabled>Approved</button>`
 }
-`
-
-container.appendChild(div)
-
-})
-
-function approve(index){
-users[index].admitted = true
-localStorage.setItem("users", JSON.stringify(users))
-location.reload()
-}
-
-function logout(){
-localStorage.removeItem("admin")
-window.location = "admin-login.html"
-}
-
-</script>
-
-</head>
-
-<body>
-
-<h1>Admin Panel</h1>
-
-<button onclick="logout()">Logout</button>
-
-<div id="studentList"></div>
-
-<script>
-
-let users = JSON.parse(localStorage.getItem("users")) || []
-let container = document.getElementById("studentList")
-
-users.forEach((u, index) => {
-
-let div = document.createElement("div")
-div.className = "card"
-
-div.innerHTML = `
-<h3>${u.name}</h3>
-<p>${u.email}</p>
-<p>Status: ${u.admitted ? "Admitted" : "Not Admitted"}</p>
-<button onclick="approve(${index})">Approve</button>
 `
 
 container.appendChild(div)
