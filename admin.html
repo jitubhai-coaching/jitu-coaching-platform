@@ -43,7 +43,10 @@ div.innerHTML = `
 <p><b>Status:</b> ${u.admitted ? "✅ Admitted" : "❌ Not Admitted"}</p>
 
 ${!u.admitted ? 
-`<button onclick="approve(${index})">Approve</button>` 
+`
+<button onclick="approve(${index})">Approve</button>
+<button onclick="removeUser(${index})" style="background:red;margin-left:10px;">Reject</button>
+`
 : 
 `<button disabled>Approved</button>`
 }
@@ -62,6 +65,14 @@ location.reload()
 function logout(){
 sessionStorage.removeItem("admin")
 window.location = "admin-login.html"
+}
+
+function removeUser(index){
+if(confirm("Are you sure to delete this student?")){
+users.splice(index, 1)
+localStorage.setItem("users", JSON.stringify(users))
+location.reload()
+}
 }
 
 </script>
