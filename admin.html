@@ -2,6 +2,13 @@
 <html>
 
 <head>
+<script>
+let isAdmin = localStorage.getItem("admin")
+
+if(isAdmin !== "true"){
+window.location = "admin-login.html"
+}
+</script>
 <title>Admin Panel</title>
 <link rel="stylesheet" href="css/style.css">
 </head>
