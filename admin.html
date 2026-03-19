@@ -2,18 +2,17 @@
 <html>
 
 <head>
+<title>Admin Panel</title>
+<link rel="stylesheet" href="css/style.css">
+
 <script>
-let isAdmin = localStorage.getItem("admin")
+let isAdmin = sessionStorage.getItem("admin")
 
 if(isAdmin !== "true"){
 window.location = "admin-login.html"
 }
-window.onbeforeunload = function(){
-localStorage.removeItem("admin")
-}
 </script>
-<title>Admin Panel</title>
-<link rel="stylesheet" href="css/style.css">
+
 </head>
 
 <body>
@@ -26,7 +25,6 @@ localStorage.removeItem("admin")
 
 <script>
 
-// get users AFTER page loads
 let users = JSON.parse(localStorage.getItem("users")) || []
 let container = document.getElementById("studentList")
 
@@ -62,7 +60,7 @@ location.reload()
 }
 
 function logout(){
-localStorage.removeItem("admin")
+sessionStorage.removeItem("admin")
 window.location = "admin-login.html"
 }
 
