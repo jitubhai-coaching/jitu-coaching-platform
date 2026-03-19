@@ -15,21 +15,19 @@
 <button onclick="loginAdmin()">Login</button>
 
 <script>
-
 function loginAdmin(){
 
 let u = document.getElementById("adminUser").value
 let p = document.getElementById("adminPass").value
 
 if(u === "sambitkumarbehera" && p === "Gajanan@2000"){
-localStorage.setItem("admin", "true")
+sessionStorage.setItem("admin", "true")   // ✅ FIXED
 window.location = "admin.html"
 }else{
 alert("Wrong admin credentials")
 }
 
 }
-
 </script>
 
 </body>
