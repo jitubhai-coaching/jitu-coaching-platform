@@ -1,2 +1,2 @@
-# jitu-coaching-platform
-Digital coaching platform for Jitu Bhai Coaching (JBC) including student portal, online tests, and admin dashboard.
+# ss-career-center
+Digital coaching platform for SS Career Center (SSCC) including student portal, online tests, and admin dashboard.
